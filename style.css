@@ -23,18 +23,15 @@ body {
   .fa-facebook {
     background: #3B5998;
     color: white;
-    radius: 50%;
   }
   
   /* Twitter */
   .fa-twitter {
     background: #55ACEE;
     color: white;
-    radius: 50%;
   }
 
   /* Instagram */
   .fa-instagram {
     background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-    radius: 50%; 
   }
