@@ -22,14 +22,17 @@ body {
   /* Facebook */
   .fa-facebook {
     color: white;
+    background-color: transparent;
   }
   
   /* Twitter */
   .fa-twitter {
     color: white;
+    background-color: transparent;
   }
 
   /* Instagram */
   .fa-instagram {
     color: white;
+    background-color: transparent;
   }
