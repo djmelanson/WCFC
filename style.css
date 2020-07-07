@@ -35,3 +35,12 @@ body {
   .fa-instagram {
     background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
   }
+
+  #social-media {
+    padding: 20px;
+    font-size: 34px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25%;
+  }
