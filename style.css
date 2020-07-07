@@ -1,5 +1,6 @@
 body {
-    padding-top: 70px; 
+    padding-top: 70px;
+    padding-bottom: 20px; 
 }
 
 /* Style all font awesome icons */
@@ -28,4 +29,9 @@ body {
   .fa-twitter {
     background: #55ACEE;
     color: white;
+  }
+
+  /* Instagram */
+  .fa-instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); 
   }
