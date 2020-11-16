@@ -69,6 +69,30 @@ const playoffWeek2 = {date: "Nov 21", time: "TBD", homeTeam: "TBD", awayTeam: "T
 gameWeek1.homeScore = 1;
 gameWeek1.awayScore = 0;
 
+gameWeek2.homeScore = 1;
+gameWeek2.awayScore = 10;
+
+gameWeek3.homeScore = 2;
+gameWeek3.awayScore = 1;
+
+gameWeek4.homeScore = 0;
+gameWeek4.awayScore = 4;
+
+gameWeek5.homeScore = 3;
+gameWeek5.awayScore = 3;
+
+gameWeek6.homeScore = 1;
+gameWeek6.awayScore = 2;
+
+gameWeek7.homeScore = 6;
+gameWeek7.awayScore = 3;
+
+playoffWeek1.homeScore = 1;
+playoffWeek1.awayScore = 1 + "*";
+
+playoffWeek2.homeScore = "-";
+playoffWeek2.awayScore = "-";
+
 
 /*  Set game info into HTML tags by ID  */
 gw1Date.innerHTML = gameWeek1.date;
