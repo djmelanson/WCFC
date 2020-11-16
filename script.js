@@ -16,6 +16,12 @@ const gameWeek7 = {date: "Oct 31", time: "12:00pm", homeTeam: wcfc, awayTeam: "L
 const playoffWeek1 = {date: "Nov 14", time: "11:00am", homeTeam: "North Shore FC", awayTeam: wcfc, field: "Veterans Field, Waltham", score: "- v -"};
 const playoffWeek2 = {date: "Nov 21", time: "TBD", homeTeam: "TBD", awayTeam: "TBD", field: "TBD", score: "- v -"};
 
+
+/*  Update scores  */
+gameWeek1.homeScore = 1;
+gameWeek1.awayScore = 0;
+
+
 /*  Set game info  */
 gw1Date.innerHTML = gameWeek1.date;
 gw1Time.innerHTML = gameWeek1.time;
@@ -23,8 +29,3 @@ gw1Home.innerHTML = gameWeek1.homeTeam;
 gw1Score.innerHTML = gameWeek1.homeScore + " v " + gameWeek1.awayScore;
 gw1Away.innerHTML = gameWeek1.awayTeam;
 gw1Field.innerHTML = gameWeek1.field;
-
-
-/*  Update scores  */
-gameWeek1.homeScore = 1;
-gameWeek1.awayScore = 0;
