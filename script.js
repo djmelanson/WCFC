@@ -72,6 +72,14 @@ const playoffWeek2 = {date: "Nov 21", time: "TBD", homeTeam: "TBD", awayTeam: "T
 gameWeek1.homeScore = 1;
 gameWeek1.awayScore = 0;
 
+if (gameWeek1.homeTeam == wcfc && gameWeek1.homeScore > gameWeek1.awayScore) {
+    gw1Result.innerHTML = "W";
+} else if (gameWeek1.awayTeam == wcfc && gameWeek1.awayScore > gameWeek1.homeScore) {
+    gw1Result.innerHTML = "W";
+} else {
+    gw1Result.innerHTML = "L";
+}
+
 gameWeek2.homeScore = 1;
 gameWeek2.awayScore = 10;
 
