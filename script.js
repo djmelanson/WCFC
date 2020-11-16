@@ -20,7 +20,7 @@ const playoffWeek2 = {date: "Nov 21", time: "TBD", homeTeam: "TBD", awayTeam: "T
 gw1Date.innerHTML = gameWeek1.date;
 gw1Time.innerHTML = gameWeek1.time;
 gw1Home.innerHTML = gameWeek1.homeTeam;
-gw1Score.innterHTML = gameWeek1.homeScore + " v " + gameWeek1.awayScore;
+gw1Score.innerHTML = gameWeek1.homeScore + " v " + gameWeek1.awayScore;
 gw1Away.innerHTML = gameWeek1.awayTeam;
 gw1Field.innerHTML = gameWeek1.field;
 
