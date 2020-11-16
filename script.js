@@ -1,6 +1,7 @@
 /*  Set constant variables to HTML tags  */
 const gw1Date = document.querySelector("#gw1-date");
 const gw1Time = document.querySelector("#gw1-time");
+const gw1Result = document.querySelector("#gw1-result")
 const gw1Home = document.querySelector("#gw1-home");
 const gw1Score = document.querySelector("#gw1-score");
 const gw1Away = document.querySelector("#gw1-away");
@@ -54,6 +55,8 @@ const po2Score = document.querySelector("#po2-score");
 const po2Away = document.querySelector("#po2-away");
 const po2Field = document.querySelector("#po2-field");
 const wcfc = "Worcester County FC";
+
+/*  Set game information  */
 const gameWeek1 = {date: "Sep 19", time: "11:00am", homeTeam: "North Shore FC", awayTeam: wcfc, field: "Harry Della Russo Stadium, Revere", homeScore: "-", awayScore: "-"};
 const gameWeek2 = {date: "Sep 26", time: "9:30am", homeTeam: "FC Hawks", awayTeam: wcfc, field: "Edge Sports Center, Bedford", score: "- v -"};
 const gameWeek3 = {date: "Oct 03", time: "9:00am", homeTeam: wcfc, awayTeam: "Inter Boston FC", field: "Klingle Field, Paxton", score: "- v -"};
@@ -68,6 +71,20 @@ const playoffWeek2 = {date: "Nov 21", time: "TBD", homeTeam: "TBD", awayTeam: "T
 /*  Update scores  */
 gameWeek1.homeScore = 1;
 gameWeek1.awayScore = 0;
+
+if (gameWeek1.homeTeam = wcfc) {
+    if (gameWeek1.homeScore > gameWeek1.awayScore) {
+        gw1Result.innerHTML = "W";
+    } else {
+        gw1Result.innerHTML = "L";
+    }
+else {
+    if(gameWeek1.homeScore > gameWeek1.awayScore) {
+        gw1Result.innerHTML = "L";
+    } else {
+        gw1Result.innerHTML = "W";
+    }
+}
 
 gameWeek2.homeScore = 1;
 gameWeek2.awayScore = 10;
