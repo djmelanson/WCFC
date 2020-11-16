@@ -77,8 +77,8 @@ if (gameWeek1.homeTeam = wcfc) {
         gw1Result.innerHTML = "W";
     } else {
         gw1Result.innerHTML = "L";
-    }
-else {
+    } 
+} else {
     if(gameWeek1.homeScore > gameWeek1.awayScore) {
         gw1Result.innerHTML = "L";
     } else {
