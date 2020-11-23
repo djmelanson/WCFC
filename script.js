@@ -1,7 +1,6 @@
 /*  Set constant variables to HTML tags  */
 const gw1Date = document.querySelector("#gw1-date");
 const gw1Time = document.querySelector("#gw1-time");
-const gw1Result = document.querySelector("#gw1-result")
 const gw1Home = document.querySelector("#gw1-home");
 const gw1Score = document.querySelector("#gw1-score");
 const gw1Away = document.querySelector("#gw1-away");
@@ -65,20 +64,12 @@ const gameWeek5 = {date: "Oct 17", time: "9:00am", homeTeam: wcfc, awayTeam: "Wo
 const gameWeek6 = {date: "Oct 24", time: "2:00pm", homeTeam: "SR Young Boys", awayTeam: wcfc, field: "Amesbury Sports Park", score: "- v -"};
 const gameWeek7 = {date: "Oct 31", time: "12:00pm", homeTeam: wcfc, awayTeam: "Lynnfield Legends", field: "Klingle Field, Paxton", score: "- v -"};
 const playoffWeek1 = {date: "Nov 14", time: "11:00am", homeTeam: "North Shore FC", awayTeam: wcfc, field: "Veterans Field, Waltham", score: "- v -"};
-const playoffWeek2 = {date: "Nov 21", time: "TBD", homeTeam: "TBD", awayTeam: "TBD", field: "TBD", score: "- v -"};
+const playoffWeek2 = {date: "Nov 21", time: "12:00pm", homeTeam: "Inter Boston FC", awayTeam: wcfc, field: "Medfield High School", score: "- v -"};
 
 
 /*  Update scores  */
 gameWeek1.homeScore = 1;
 gameWeek1.awayScore = 0;
-
-if (gameWeek1.homeTeam == wcfc && gameWeek1.homeScore > gameWeek1.awayScore) {
-    gw1Result.innerHTML = "W";
-} else if (gameWeek1.awayTeam == wcfc && gameWeek1.awayScore > gameWeek1.homeScore) {
-    gw1Result.innerHTML = "W";
-} else {
-    gw1Result.innerHTML = "L";
-}
 
 gameWeek2.homeScore = 1;
 gameWeek2.awayScore = 10;
@@ -101,8 +92,8 @@ gameWeek7.awayScore = 3;
 playoffWeek1.homeScore = 1;
 playoffWeek1.awayScore = 1 + "*";
 
-playoffWeek2.homeScore = "-";
-playoffWeek2.awayScore = "-";
+playoffWeek2.homeScore = 3;
+playoffWeek2.awayScore = 2;
 
 
 /*  Set game info into HTML tags by ID  */
