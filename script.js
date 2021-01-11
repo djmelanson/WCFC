@@ -53,6 +53,7 @@ const po2Home = document.querySelector("#po2-home");
 const po2Score = document.querySelector("#po2-score");
 const po2Away = document.querySelector("#po2-away");
 const po2Field = document.querySelector("#po2-field");
+const todayDate = document.querySelector("#todayDate");
 const wcfc = "Worcester County FC";
 
 /*  Set game information  */
@@ -159,3 +160,5 @@ po2Home.innerHTML = playoffWeek2.homeTeam;
 po2Score.innerHTML = playoffWeek2.homeScore + " v " + playoffWeek2.awayScore;
 po2Away.innerHTML = playoffWeek2.awayTeam;
 po2Field.innerHTML = playoffWeek2.field;
+
+todayDate.innerHTML = LocalDate;
