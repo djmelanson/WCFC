@@ -98,7 +98,7 @@ playoffWeek2.awayScore = 2;
 
 
 /*  Set game info into HTML tags by ID  */
-upcomingGame1.innerHTML = localDate.now();
+upcomingGame1.innerHTML = LocalDate.now();
 
 gw1Date.innerHTML = gameWeek1.date;
 gw1Time.innerHTML = gameWeek1.time;
