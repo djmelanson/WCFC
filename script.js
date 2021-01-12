@@ -1,6 +1,3 @@
-/*  Import Java LocalDate feature */
-
-
 /*  Set constant variables to HTML tags  */
 const upcomingGame1 = document.querySelector("#upcoming-game1")
 const gw1Date = document.querySelector("#gw1-date");
@@ -70,7 +67,8 @@ const gameWeek7 = {date: "Oct 31", time: "12:00pm", homeTeam: wcfc, awayTeam: "L
 const playoffWeek1 = {date: "Nov 14 **", time: "11:00am", homeTeam: "North Shore FC", awayTeam: wcfc, field: "Veterans Field, Waltham", score: "- v -"};
 const playoffWeek2 = {date: "Nov 21 **", time: "12:00pm", homeTeam: "Inter Boston FC", awayTeam: wcfc, field: "Medfield High School", score: "- v -"};
 const upcomingGame = gameWeek1;
-const upcomingGame1 = upcomingGame.date;
+const currentDate = LocalDate.now();
+const upcomingGame1 = currentDate;
 
 
 /*  Update scores  */
