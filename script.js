@@ -1,3 +1,6 @@
+/*  Import Java LocalDate feature */
+import java.time.LocalDate;
+
 /*  Set constant variables to HTML tags  */
 const gw1Date = document.querySelector("#gw1-date");
 const gw1Time = document.querySelector("#gw1-time");
@@ -53,7 +56,7 @@ const po2Home = document.querySelector("#po2-home");
 const po2Score = document.querySelector("#po2-score");
 const po2Away = document.querySelector("#po2-away");
 const po2Field = document.querySelector("#po2-field");
-const todayDate = document.querySelector("#todayDate");
+const todayDate = document.querySelector("#today-date");
 const wcfc = "Worcester County FC";
 
 /*  Set game information  */
@@ -161,4 +164,4 @@ po2Score.innerHTML = playoffWeek2.homeScore + " v " + playoffWeek2.awayScore;
 po2Away.innerHTML = playoffWeek2.awayTeam;
 po2Field.innerHTML = playoffWeek2.field;
 
-todayDate.innerHTML = LocalDate;
+todayDate.innerHTML = LocalDate.now();
