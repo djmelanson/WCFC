@@ -1,5 +1,5 @@
 /*  Import Java LocalDate feature */
-import java.time.LocalDate;
+
 
 /*  Set constant variables to HTML tags  */
 const gw1Date = document.querySelector("#gw1-date");
@@ -164,4 +164,4 @@ po2Score.innerHTML = playoffWeek2.homeScore + " v " + playoffWeek2.awayScore;
 po2Away.innerHTML = playoffWeek2.awayTeam;
 po2Field.innerHTML = playoffWeek2.field;
 
-todayDate.innerHTML = LocalDate.now();
+todayDate.innerHTML = java.time.LocalDate.now();
