@@ -66,9 +66,6 @@ const gameWeek6 = {date: "Oct 24", time: "2:00pm", homeTeam: "SR Young Boys", aw
 const gameWeek7 = {date: "Oct 31", time: "12:00pm", homeTeam: wcfc, awayTeam: "Lynnfield Legends", field: "Klingle Field, Paxton", score: "- v -"};
 const playoffWeek1 = {date: "Nov 14 **", time: "11:00am", homeTeam: "North Shore FC", awayTeam: wcfc, field: "Veterans Field, Waltham", score: "- v -"};
 const playoffWeek2 = {date: "Nov 21 **", time: "12:00pm", homeTeam: "Inter Boston FC", awayTeam: wcfc, field: "Medfield High School", score: "- v -"};
-const upcomingGame = gameWeek1;
-const currentDate = LocalDate.now();
-const upcomingGame1 = currentDate;
 
 
 /*  Update scores  */
@@ -163,3 +160,5 @@ po2Home.innerHTML = playoffWeek2.homeTeam;
 po2Score.innerHTML = playoffWeek2.homeScore + " v " + playoffWeek2.awayScore;
 po2Away.innerHTML = playoffWeek2.awayTeam;
 po2Field.innerHTML = playoffWeek2.field;
+
+upcomingGame1.innerHTML = localDate.now();
