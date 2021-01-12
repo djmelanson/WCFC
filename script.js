@@ -98,6 +98,8 @@ playoffWeek2.awayScore = 2;
 
 
 /*  Set game info into HTML tags by ID  */
+upcomingGame1.innerHTML = localDate.now();
+
 gw1Date.innerHTML = gameWeek1.date;
 gw1Time.innerHTML = gameWeek1.time;
 gw1Home.innerHTML = gameWeek1.homeTeam;
@@ -160,5 +162,3 @@ po2Home.innerHTML = playoffWeek2.homeTeam;
 po2Score.innerHTML = playoffWeek2.homeScore + " v " + playoffWeek2.awayScore;
 po2Away.innerHTML = playoffWeek2.awayTeam;
 po2Field.innerHTML = playoffWeek2.field;
-
-upcomingGame1.innerHTML = localDate.now();
