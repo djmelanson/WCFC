@@ -1,3 +1,7 @@
+/*  Import Java Date/Time features */
+import java.time.LocalDate;
+
+
 /*  Set constant variables to HTML tags  */
 const upcomingGame1 = document.querySelector("#upcoming-game1")
 const gw1Date = document.querySelector("#gw1-date");
