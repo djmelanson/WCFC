@@ -2,6 +2,7 @@
 
 
 /*  Set constant variables to HTML tags  */
+const upcomingGame1 = document.querySelector("#upcoming-game1")
 const gw1Date = document.querySelector("#gw1-date");
 const gw1Time = document.querySelector("#gw1-time");
 const gw1Home = document.querySelector("#gw1-home");
@@ -56,7 +57,6 @@ const po2Home = document.querySelector("#po2-home");
 const po2Score = document.querySelector("#po2-score");
 const po2Away = document.querySelector("#po2-away");
 const po2Field = document.querySelector("#po2-field");
-const todayDate = document.querySelector("#today-date");
 const wcfc = "Worcester County FC";
 
 /*  Set game information  */
@@ -69,6 +69,7 @@ const gameWeek6 = {date: "Oct 24", time: "2:00pm", homeTeam: "SR Young Boys", aw
 const gameWeek7 = {date: "Oct 31", time: "12:00pm", homeTeam: wcfc, awayTeam: "Lynnfield Legends", field: "Klingle Field, Paxton", score: "- v -"};
 const playoffWeek1 = {date: "Nov 14 **", time: "11:00am", homeTeam: "North Shore FC", awayTeam: wcfc, field: "Veterans Field, Waltham", score: "- v -"};
 const playoffWeek2 = {date: "Nov 21 **", time: "12:00pm", homeTeam: "Inter Boston FC", awayTeam: wcfc, field: "Medfield High School", score: "- v -"};
+const upcomingGame1 = gameWeek1;
 
 
 /*  Update scores  */
@@ -163,5 +164,3 @@ po2Home.innerHTML = playoffWeek2.homeTeam;
 po2Score.innerHTML = playoffWeek2.homeScore + " v " + playoffWeek2.awayScore;
 po2Away.innerHTML = playoffWeek2.awayTeam;
 po2Field.innerHTML = playoffWeek2.field;
-
-todayDate.innerHTML = java.time.LocalDate.now();
