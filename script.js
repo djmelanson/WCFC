@@ -1,9 +1,4 @@
-/*  Import Java Date/Time features */
-import java.time.*;
-
-
 /*  Set constant variables to HTML tags  */
-const upcomingGame1 = document.querySelector("#upcoming-game1")
 const gw1Date = document.querySelector("#gw1-date");
 const gw1Time = document.querySelector("#gw1-time");
 const gw1Home = document.querySelector("#gw1-home");
@@ -59,6 +54,8 @@ const po2Score = document.querySelector("#po2-score");
 const po2Away = document.querySelector("#po2-away");
 const po2Field = document.querySelector("#po2-field");
 const wcfc = "Worcester County FC";
+const now = new date().getTime();
+const upcomingGame1 = document.querySelector("#upcoming-game1");
 
 /*  Set game information  */
 const gameWeek1 = {date: "Sep 19", time: "11:00am", homeTeam: "North Shore FC", awayTeam: wcfc, field: "Harry Della Russo Stadium, Revere", homeScore: "-", awayScore: "-"};
@@ -102,7 +99,7 @@ playoffWeek2.awayScore = 2;
 
 
 /*  Set game info into HTML tags by ID  */
-upcomingGame1.innerHTML = LocalDate.now();
+upcomingGame1.innerHTML = now;
 
 gw1Date.innerHTML = gameWeek1.date;
 gw1Time.innerHTML = gameWeek1.time;
