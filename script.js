@@ -1,4 +1,10 @@
 /*  Set constant variables to HTML tags  */
+/*  Index page  */
+const upcomingGameDate = document.querySelector("#upcoming-game-date");
+const upcomingGameOpponent = document.querySelector("#upcoming-game-opponent");
+const upcomingGameTime = document.querySelector("#upcoming-game-time");
+const upcomingGameLocation = document.querySelector("#upcoming-game-location");
+/*  Schedule page  */
 const gw1Date = document.querySelector("#gw1-date");
 const gw1Time = document.querySelector("#gw1-time");
 const gw1Home = document.querySelector("#gw1-home");
@@ -54,8 +60,6 @@ const po2Score = document.querySelector("#po2-score");
 const po2Away = document.querySelector("#po2-away");
 const po2Field = document.querySelector("#po2-field");
 const wcfc = "Worcester County FC";
-const now = new date().getTime();
-const upcomingGame1 = document.querySelector("#upcoming-game1");
 
 /*  Set game information  */
 const gameWeek1 = {date: "Sep 19", time: "11:00am", homeTeam: "North Shore FC", awayTeam: wcfc, field: "Harry Della Russo Stadium, Revere", homeScore: "-", awayScore: "-"};
@@ -67,7 +71,6 @@ const gameWeek6 = {date: "Oct 24", time: "2:00pm", homeTeam: "SR Young Boys", aw
 const gameWeek7 = {date: "Oct 31", time: "12:00pm", homeTeam: wcfc, awayTeam: "Lynnfield Legends", field: "Klingle Field, Paxton", score: "- v -"};
 const playoffWeek1 = {date: "Nov 14 **", time: "11:00am", homeTeam: "North Shore FC", awayTeam: wcfc, field: "Veterans Field, Waltham", score: "- v -"};
 const playoffWeek2 = {date: "Nov 21 **", time: "12:00pm", homeTeam: "Inter Boston FC", awayTeam: wcfc, field: "Medfield High School", score: "- v -"};
-
 
 /*  Update scores  */
 gameWeek1.homeScore = 1;
@@ -99,8 +102,6 @@ playoffWeek2.awayScore = 2;
 
 
 /*  Set game info into HTML tags by ID  */
-upcomingGame1.innerHTML = now;
-
 gw1Date.innerHTML = gameWeek1.date;
 gw1Time.innerHTML = gameWeek1.time;
 gw1Home.innerHTML = gameWeek1.homeTeam;
