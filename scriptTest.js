@@ -66,12 +66,13 @@ const wcfc = "Worcester County FC";
 
 */
 
-const gameWeek1FullDate = document.querySelector("#gw1-full-date");
-const gameWeek1Date = document.querySelector("#gw1-date");
-const gameWeek1FullGameTime = document.querySelector("#gw1-full-time");
-const gameWeek1Hour = document.querySelector("#gw1-hour");
-const gameWeek1Minutes = document.querySelector("#gw1-minutes");
-const gameWeek1HourMinutes = document.querySelector("#gw1-time");
+
+const gw1FullDate = document.querySelector("#gw1-full-date");
+const gw1Date = document.querySelector("#gw1-date");
+const gw1FullTime = document.querySelector("#gw1-full-time");
+const gw1Hour = document.querySelector("#gw1-hour");
+const gw1Minutes = document.querySelector("#gw1-minutes");
+const gw1Time = document.querySelector("#gw1-time");
 
 /* Set game dates */
 const gameWeek1FullDate = "September 19, 2021 11:00:00";
@@ -105,6 +106,15 @@ const gameWeek1Minutes = gameWeek1HourMinutes.substring(gameWeek1HourMinutes.len
 
 /* Turn the dates into times */
 const gameWeek1DateNumber = new Date(gameWeek1FullDate).getTime();
+
+/*  Set game info into HTML tags by ID  */
+gw1FullDate.innerHTML = gameWeek1FullDate;
+gw1Date.innerHTML = gameWeek1Date;
+gw1FullTime.innerHTML = gameWeek1FullGameTime;
+gw1Hour.innerHTML = gameWeek1Hour;
+gw1Minutes.innerHTML = gameWeek1Minutes;
+gw1Time.innerHTML = gameWeek1HourMinutes;
+
 
 
 /* Comment out old data from script.js
