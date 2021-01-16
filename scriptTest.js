@@ -66,12 +66,12 @@ const wcfc = "Worcester County FC";
 
 */
 
-const gameWeek1FullDate = document.getElementById("gw1-full-date");
-const gameWeek1Date = document.getElementById("gw1-date");
-const gameWeek1FullTime = document.getElementById("gw1-full-time");
-const gameWeek1Hour = document.getElementById("gw1-hour");
-const gameWeek1Minutes = document.getElementById("gw1-minutes");
-const gameWeek1Time = document.getElementById("gw1-time");
+const gameWeek1FullDate = document.querySelector("#gw1-full-date");
+const gameWeek1Date = document.querySelector("#gw1-date");
+const gameWeek1FullGameTime = document.querySelector("#gw1-full-time");
+const gameWeek1Hour = document.querySelector("#gw1-hour");
+const gameWeek1Minutes = document.querySelector("#gw1-minutes");
+const gameWeek1HourMinutes = document.querySelector("#gw1-time");
 
 /* Set game dates */
 const gameWeek1FullDate = "September 19, 2021 11:00:00";
