@@ -63,6 +63,7 @@ const wcfc = "Worcester County FC";
 
 /* NEW GAME INFORMATION!! Comment out until complete. Should reflect on scheduleTest.html
 
+/* Set game dates 
 const gameWeek1Date = "September 19, 2021 11:00:00";
 const gameWeek2Date = "September 26, 2021 09:30:00";
 const gameWeek3Date = "October 3, 2021 09:00:00";
@@ -73,6 +74,7 @@ const gameWeek7Date = "October 31, 2021 12:00:00";
 const playoffWeek1Date = "November 14, 2021 11:00:00";
 const playoffWeek2Date = "November 21, 2021 12:00:00";
 
+/* Set home team, away team, and field location **keep scores as they are
 const gameWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, field: "Harry Della Russo Stadium, Revere", homeScore: "-", awayScore: "-"};
 const gameWeek2 = {homeTeam: "FC Hawks", awayTeam: wcfc, field: "Edge Sports Center, Bedford", score: "- v -"};
 const gameWeek3 = {homeTeam: wcfc, awayTeam: "Inter Boston FC", field: "Klingle Field, Paxton", score: "- v -"};
