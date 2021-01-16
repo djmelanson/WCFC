@@ -4,7 +4,10 @@ const upcomingGameDate = document.querySelector("#upcoming-game-date");
 const upcomingGameOpponent = document.querySelector("#upcoming-game-opponent");
 const upcomingGameTime = document.querySelector("#upcoming-game-time");
 const upcomingGameLocation = document.querySelector("#upcoming-game-location");
-/*  Schedule page  */
+
+/* Comment out old data from schedule page
+
+/*  Schedule page 
 const gw1Date = document.querySelector("#gw1-date");
 const gw1Time = document.querySelector("#gw1-time");
 const gw1Home = document.querySelector("#gw1-home");
@@ -61,20 +64,28 @@ const po2Away = document.querySelector("#po2-away");
 const po2Field = document.querySelector("#po2-field");
 const wcfc = "Worcester County FC";
 
-/* NEW GAME INFORMATION!! Comment out until complete. Should reflect on scheduleTest.html
+*/
 
-/* Set game dates 
-const gameWeek1Date = "September 19, 2021 11:00:00";
-const gameWeek2Date = "September 26, 2021 09:30:00";
-const gameWeek3Date = "October 3, 2021 09:00:00";
-const gameWeek4Date = "October 10, 2021 12:00:00";
-const gameWeek5Date = "October 17, 2021 09:00:00";
-const gameWeek6Date = "October 24, 2021 14:00:00";
-const gameWeek7Date = "October 31, 2021 12:00:00";
-const playoffWeek1Date = "November 14, 2021 11:00:00";
-const playoffWeek2Date = "November 21, 2021 12:00:00";
+const gw1FullDate = document.querySelector("#gw1-full-date");
+const gw1Date = document.querySelector("#gw1-date");
+const gw1FullTime = document.querySelector("#gw1-full-time");
+const gw1Hour = document.querySelector("#gw1-hour");
+const gw1Minutes = document.querySelector("#gw1-minutes");
+const gw1Time = document.querySelector("#gw1-time");
 
-/* Set home team, away team, and field location **keep scores as they are
+/* Set game dates */
+const gameWeek1FullDate = "September 19, 2021 11:00:00";
+const gameWeek2FullDate = "September 26, 2021 09:30:00";
+const gameWeek3FullDate = "October 3, 2021 09:00:00";
+const gameWeek4FullDate = "October 10, 2021 12:00:00";
+const gameWeek5FullDate = "October 17, 2021 09:00:00";
+const gameWeek6FullDate = "October 24, 2021 14:00:00";
+const gameWeek7FullDate = "October 31, 2021 12:00:00";
+const playoffWeek1FullDate = "November 14, 2021 11:00:00";
+const playoffWeek2FullDate = "November 21, 2021 12:00:00";
+
+
+/* Set home team, away team, and field location **DO NOT CHANGE SCORES** */
 const gameWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, field: "Harry Della Russo Stadium, Revere", homeScore: "-", awayScore: "-"};
 const gameWeek2 = {homeTeam: "FC Hawks", awayTeam: wcfc, field: "Edge Sports Center, Bedford", score: "- v -"};
 const gameWeek3 = {homeTeam: wcfc, awayTeam: "Inter Boston FC", field: "Klingle Field, Paxton", score: "- v -"};
@@ -85,12 +96,20 @@ const gameWeek7 = {homeTeam: wcfc, awayTeam: "Lynnfield Legends", field: "Klingl
 const playoffWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, field: "Veterans Field, Waltham", score: "- v -"};
 const playoffWeek2 = {homeTeam: "Inter Boston FC", awayTeam: wcfc, field: "Medfield High School", score: "- v -"};
 
+/* Take the dates and parse them out into date, time incl seconds, time not incl seconds, hour, and minutes */
+const gameWeek1Date = gameWeek1FullDate.substring(0, gameWeek1FullDate.length - 9);
+const gameWeek1FullGameTime = gameWeek1FullDate.substring(gameWeek1FullDate.length - 9);
+const gameWeek1HourMinutes = gameWeek1FullGameTime.substring(0, gameWeek1FullGameTime.length - 3);
+const gameWeek1Hour = gameWeek1FullGameTime.substring(0, gameWeek1FullGameTime.length - 5);
+const gameWeek1Minutes = gameWeek1HourMinutes.substring(gameWeek1HourMinutes.length - 3);
+
+/* Turn the dates into times */
+const gameWeek1DateNumber = new Date(gameWeek1FullDate).getTime();
 
 
+/* Comment out old data from script.js
 
-*/
-
-/*  Set game information  */
+/*  Set game information 
 const gameWeek1 = {date: "Sep 19", time: "11:00am", homeTeam: "North Shore FC", awayTeam: wcfc, field: "Harry Della Russo Stadium, Revere", homeScore: "-", awayScore: "-"};
 const gameWeek2 = {date: "Sep 26", time: "9:30am", homeTeam: "FC Hawks", awayTeam: wcfc, field: "Edge Sports Center, Bedford", score: "- v -"};
 const gameWeek3 = {date: "Oct 03", time: "9:00am", homeTeam: wcfc, awayTeam: "Inter Boston FC", field: "Klingle Field, Paxton", score: "- v -"};
@@ -101,7 +120,7 @@ const gameWeek7 = {date: "Oct 31", time: "12:00pm", homeTeam: wcfc, awayTeam: "L
 const playoffWeek1 = {date: "Nov 14 **", time: "11:00am", homeTeam: "North Shore FC", awayTeam: wcfc, field: "Veterans Field, Waltham", score: "- v -"};
 const playoffWeek2 = {date: "Nov 21 **", time: "12:00pm", homeTeam: "Inter Boston FC", awayTeam: wcfc, field: "Medfield High School", score: "- v -"};
 
-/*  Update scores  */
+/*  Update scores  
 gameWeek1.homeScore = 1;
 gameWeek1.awayScore = 0;
 
@@ -130,7 +149,7 @@ playoffWeek2.homeScore = 3;
 playoffWeek2.awayScore = 2;
 
 
-/*  Set game info into HTML tags by ID  */
+/*  Set game info into HTML tags by ID 
 gw1Date.innerHTML = gameWeek1.date;
 gw1Time.innerHTML = gameWeek1.time;
 gw1Home.innerHTML = gameWeek1.homeTeam;
@@ -193,3 +212,5 @@ po2Home.innerHTML = playoffWeek2.homeTeam;
 po2Score.innerHTML = playoffWeek2.homeScore + " v " + playoffWeek2.awayScore;
 po2Away.innerHTML = playoffWeek2.awayTeam;
 po2Field.innerHTML = playoffWeek2.field;
+
+*/
