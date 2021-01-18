@@ -1,5 +1,6 @@
 /*  Set constant variables to HTML tags  */
 const gw1FullDate = document.querySelector("#gw1-full-date");
+const wcfc = "Worcester County FC";
 
 /* Set game dates */
 const gameWeek1Date = "September 19, 2021 11:00:00";
@@ -15,7 +16,6 @@ const gameWeek6 = {homeTeam: "SR Young Boys", awayTeam: wcfc, field: "Amesbury S
 const gameWeek7 = {homeTeam: wcfc, awayTeam: "Lynnfield Legends", field: "Klingle Field, Paxton", score: "- v -"};
 const playoffWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, field: "Veterans Field, Waltham", score: "- v -"};
 const playoffWeek2 = {homeTeam: "Inter Boston FC", awayTeam: wcfc, field: "Medfield High School", score: "- v -"};
-const wcfc = "Worcester County FC";
 
 
 /*  Update scores  */
