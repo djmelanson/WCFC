@@ -15,7 +15,7 @@ const gameWeek6 = {homeTeam: "SR Young Boys", awayTeam: wcfc, field: "Amesbury S
 const gameWeek7 = {homeTeam: wcfc, awayTeam: "Lynnfield Legends", field: "Klingle Field, Paxton", score: "- v -"};
 const playoffWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, field: "Veterans Field, Waltham", score: "- v -"};
 const playoffWeek2 = {homeTeam: "Inter Boston FC", awayTeam: wcfc, field: "Medfield High School", score: "- v -"};
-
+const wcfc = "Worcester County FC";
 
 
 /*  Update scores  */
