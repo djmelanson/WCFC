@@ -46,6 +46,19 @@ if (countdownToGameOne > 0) {
     document.querySelector("#upcoming-game").innerHTML = "No upcoming games";
   }
 
+/* Update the count down every 1 second */
+const x = setInterval(function() {
+
+/* Time calculations for days, hours, minutes and seconds */
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                  
+/* Output the result in an element with id="upcoming-game" */
+document.querySelector("#upcoming-game").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  }, 1000)
+
 /* Set game info */
 const gameWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, field: "Harry Della Russo Stadium, Revere", homeScore: "-", awayScore: "-"};
 const gameWeek2 = {homeTeam: "FC Hawks", awayTeam: wcfc, field: "Edge Sports Center, Bedford", score: "- v -"};
