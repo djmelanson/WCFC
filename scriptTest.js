@@ -13,6 +13,7 @@ const gw1FullMonthDate = document.querySelector("#gw1-full-month-date");
 const gw1Home = document.querySelector("#gw1-home");
 const gw1Score = document.querySelector("#gw1-score");
 const gw1Away = document.querySelector("#gw1-away");
+const gw1Field = document.querySelector("#gw1-field");
 
 const wcfc = "Worcester County FC";
 const todayDate = new Date().getTime();
