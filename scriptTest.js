@@ -22,11 +22,6 @@ const gameWeek2Date = "January 20, 2021 09:30:00";
 
 /* Sets game date info based on game date above */
 const gameWeek1DateYear = gameWeek1Date.substring(0, gameWeek1Date.length - 9);
-const gameWeek1FullMonthDate = gameWeek1DateYear.slice(-5);
-const gameWeek1DayNumber = gameWeek1DateYear.slice(-8);
-const gameWeek1DayInteger = parseInt(gameWeek1DayNumber);
-const gameWeek1Month = gameWeek1DateYear.slice(0,-3);
-const gameWeek1ScheduleDay = gameWeek1Month + " " + gameWeek1DayInteger;
 const gameWeek1TimeWithSeconds = gameWeek1Date.substring(gameWeek1Date.length - 9);
 const gameWeek1Time = gameWeek1TimeWithSeconds.substring(0, gameWeek1TimeWithSeconds.length - 3);
 const gameWeek1Hour = gameWeek1TimeWithSeconds.substring(0, gameWeek1TimeWithSeconds.length - 5);
@@ -34,6 +29,11 @@ const gameWeek1Minutes = gameWeek1Time.substring(gameWeek1Time.length - 3);
 const gameWeek1DateTime = new Date(gameWeek1Date).getTime();
 const gameWeek1DateNumber = Math.floor(gameWeek1DateTime / (1000*60*60*24));
 const gameWeek1HourNumber = parseInt(gameWeek1Time);
+const gameWeek1DayNumber = gameWeek1DateYear.slice(-8);
+const gameWeek1DayInteger = parseInt(gameWeek1DayNumber);
+const gameWeek1Month = gameWeek1DateYear.slice(0,3);
+const gameWeek1ScheduleDay = gameWeek1Month + " " + gameWeek1DayInteger;
+const gameWeek1FullMonthDate = gameWeek1DateYear.slice(0,-5);
 
 /* If the hour is higher than 12, subtract 12 from it */
 if (gameWeek1HourNumber > 12) {
