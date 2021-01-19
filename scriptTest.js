@@ -1,6 +1,7 @@
 /*  Set constant variables to HTML tags  */
 const gw1FullDate = document.querySelector("#gw1-full-date");
 const gw1DateWithYear = document.querySelector("#gw1-date-with-year");
+const gw1DateTrimmed = document.querySelector("#gw1-date-trimmed");
 const gw1TimeWithSeconds = document.querySelector("#gw1-time-with-seconds");
 const gw1Time = document.querySelector("#gw1-time");
 const gw1Hour = document.querySelector("#gw1-hour");
@@ -13,7 +14,8 @@ const gameWeek1Date = "September 19, 2021 11:00:00";
 const gameWeek1DateYear = gameWeek1Date.substring(0, gameWeek1Date.length - 9);
 const gameWeek1TimeWithSeconds = gameWeek1Date.substring(gameWeek1Date.length - 9);
 const gameWeek1Time = gameWeek1TimeWithSeconds.substring(0, gameWeek1TimeWithSeconds.length - 3);
-
+const gameWeek1Hour = gameWeek1TimeWithSeconds.substring(0, gameWeek1TimeWithSeconds.length - 5);
+const gameWeek1Minutes = gameWeek1TimeWithSeconds.substring(gameWeek1Time.length - 3);
 
 
 /* Set game info */
@@ -62,8 +64,5 @@ gw1FullDate.innerHTML = gameWeek1Date;
 gw1DateWithYear.innerHTML = gameWeek1DateYear;
 gw1TimeWithSeconds.innerHTML = gameWeek1TimeWithSeconds;
 gw1Time.innerHTML = gameWeek1Time;
-
-/*
-gw1Hour.innerHTML = 
-gw1Minutes.innerHTML = 
-*/
+gw1Hour.innerHTML = gameWeek1Hour;
+gw1Minutes.innerHTML = gameWeek1Minutes;
