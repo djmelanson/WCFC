@@ -38,7 +38,7 @@ const gameWeek1HourNumber = parseInt(gameWeek1Time);
 const gameWeek1DayNumber = gameWeek1DateYear.slice(-8);
 const gameWeek1DayInteger = parseInt(gameWeek1DayNumber);
 const gameWeek1Month = gameWeek1DateYear.slice(0,3);
-const gameWeek1ScheduleDay = gameWeek1Month + " " + gameWeek1DayInteger;
+const gameWeek1ScheduleDay = gameWeek1Month + "-" + gameWeek1DayInteger;
 const gameWeek1FullMonthDate = gameWeek1DateYear.slice(0,-6);
 
 /* If the hour is higher than 12, subtract 12 from it */
