@@ -36,14 +36,12 @@ const gameWeek2DateNumber = Math.floor(gameWeek2DateTime / (1000*60*60*24));
 
  /* Set countdown to each game and find which one is next */
 const countdownToGameOne = gameWeek1DateTime - todayDate;
-var countdownToGameTwo = gameTwoDate - todayDate;
+const countdownToGameTwo = gameWeek2DateTime - todayDate;
 
 if (countdownToGameOne > 0) {
     distance = countdownToGameOne;
   } else if (countdownToGameTwo > 0) {
     distance = countdownToGameTwo;
-  } else if (countdownToGameThree > 0) {
-    distance = countdownToGameThree
   } else {
     document.querySelector("#upcoming-game").innerHTML = "No upcoming games";
   }
