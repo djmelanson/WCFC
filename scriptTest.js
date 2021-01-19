@@ -15,6 +15,13 @@ const gw1Score = document.querySelector("#gw1-score");
 const gw1Away = document.querySelector("#gw1-away");
 const gw1Field = document.querySelector("#gw1-field");
 
+const gw2ScheduleDay = document.querySelector("#gw2-schedule-day");
+const gw2FullMonthDate = document.querySelector("#gw2-full-month-date");
+const gw2Home = document.querySelector("#gw2-home");
+const gw2Score = document.querySelector("#gw2-score");
+const gw2Away = document.querySelector("#gw2-away");
+const gw2Field = document.querySelector("#gw2-field");
+
 const wcfc = "Worcester County FC";
 const todayDate = new Date().getTime();
 const now = Math.floor(todayDate / (1000*60*60*24));
@@ -34,6 +41,15 @@ const gameWeek1DateTime = new Date(gameWeek1Date).getTime();
 const gameWeek1DateNumber = Math.floor(gameWeek1DateTime / (1000*60*60*24));
 const gameWeek1HourNumber = parseInt(gameWeek1Time);
 
+const gameWeek2DateYear = gameWeek2Date.substring(0, gameWeek2Date.length - 9);
+const gameWeek2TimeWithSeconds = gameWeek2Date.substring(gameWeek2Date.length - 9);
+const gameWeek2Time = gameWeek2TimeWithSeconds.substring(0, gameWeek2TimeWithSeconds.length - 3);
+const gameWeek2Hour = gameWeek2TimeWithSeconds.substring(0, gameWeek2TimeWithSeconds.length - 5);
+const gameWeek2Minutes = gameWeek2Time.substring(gameWeek2Time.length - 3);
+const gameWeek2DateTime = new Date(gameWeek2Date).getTime();
+const gameWeek2DateNumber = Math.floor(gameWeek2DateTime / (1000*60*60*24));
+const gameWeek2HourNumber = parseInt(gameWeek2Time);
+
 /* Configures the different dates needed */
 const gameWeek1DayNumber = gameWeek1DateYear.slice(-8);
 const gameWeek1DayInteger = parseInt(gameWeek1DayNumber);
@@ -41,13 +57,28 @@ const gameWeek1Month = gameWeek1DateYear.slice(0,3);
 const gameWeek1ScheduleDay = gameWeek1Month + "-" + gameWeek1DayInteger;
 const gameWeek1FullMonthDate = gameWeek1DateYear.slice(0,-6);
 
+const gameWeek2DayNumber = gameWeek2DateYear.slice(-8);
+const gameWeek2DayInteger = parseInt(gameWeek2DayNumber);
+const gameWeek2Month = gameWeek2DateYear.slice(0,3);
+const gameWeek2ScheduleDay = gameWeek2Month + "-" + gameWeek2DayInteger;
+const gameWeek2FullMonthDate = gameWeek2DateYear.slice(0,-6);
+
 /* If the hour is higher than 12, subtract 12 from it */
 if (gameWeek1HourNumber > 12) {
   gameWeek1HourInteger = (gameWeek1HourNumber - 12)
 } else {
   gameWeek1HourInteger = gameWeek1HourNumber;
 }
+
+if (gameWeek2HourNumber > 12) {
+  gameWeek2HourInteger = (gameWeek2HourNumber - 12)
+} else {
+  gameWeek2HourInteger = gameWeek2HourNumber;
+}
+
+/* Convert the hour number to a string */
 const gameWeek1HourString = gameWeek1HourInteger.toString();
+const gameWeek2HourString = gameWeek2HourInteger.toString();
 
 /* If game start time is 24 or 1-11, add am, otherwise add pm */
 if(gameWeek1HourNumber > 23) {
@@ -58,14 +89,13 @@ if(gameWeek1HourNumber > 23) {
   gameWeek1TimeString = gameWeek1HourString + gameWeek1Minutes + "am";
 }
 
-const gameWeek2DateYear = gameWeek1Date.substring(0, gameWeek2Date.length - 9);
-const gameWeek2TimeWithSeconds = gameWeek2Date.substring(gameWeek2Date.length - 9);
-const gameWeek2Time = gameWeek2TimeWithSeconds.substring(0, gameWeek2TimeWithSeconds.length - 3);
-const gameWeek2Hour = gameWeek2TimeWithSeconds.substring(0, gameWeek2TimeWithSeconds.length - 5);
-const gameWeek2Minutes = gameWeek2TimeWithSeconds.substring(gameWeek2Time.length - 3);
-const gameWeek2DateTime = new Date(gameWeek2Date).getTime();
-const gameWeek2DateNumber = Math.floor(gameWeek2DateTime / (1000*60*60*24));
-
+if(gameWeek2HourNumber > 23) {
+  gameWeek2TimeString = gameWeek2HourString + gameWeek2Minutes + "am";
+} else if (gameWeek2HourNumber > 11) {
+  gameWeek2TimeString = gameWeek2HourString + gameWeek2Minutes + "pm";  
+} else {
+  gameWeek2TimeString = gameWeek2HourString + gameWeek2Minutes + "am";
+}
 
  /* Set countdown to each game and find which one is next */
 const countdownToGameOne = gameWeek1DateTime - todayDate;
@@ -148,3 +178,10 @@ gw1Home.innerHTML = gameWeek1.homeTeam;
 gw1Score.innerHTML = gameWeek1.homeScore + " v " + gameWeek1.awayScore;
 gw1Away.innerHTML = gameWeek1.awayTeam;
 gw1Field.innerHTML = gameWeek1.field;
+
+gw2ScheduleDay.innerHTML = gameWeek2ScheduleDay;
+gw2FullMonthDate.innerHTML = gameWeek2FullMonthDate;
+gw2Home.innerHTML = gameWeek2.homeTeam;
+gw2Score.innerHTML = gameWeek2.homeScore + " v " + gameWeek2.awayScore;
+gw2Away.innerHTML = gameWeek2.awayTeam;
+gw2Field.innerHTML = gameWeek2.field;
