@@ -41,7 +41,7 @@ if(gameWeek1DayNumber > 23) {
 } else {
   gameWeek1TimeString = gameWeek1HourString + gameWeek1Minutes + "am";
 }
-gameWeek1DateSchedule = gameWeek1DateYear.substring(gameWeek1DateYear - 3) + gameWeek1DayNumber;
+const gameWeek1DateSchedule = gameWeek1DateYear.substring(0, gameWeek1DateYear - 3) + gameWeek1DayNumber;
 
 const gameWeek2DateYear = gameWeek1Date.substring(0, gameWeek2Date.length - 9);
 const gameWeek2TimeWithSeconds = gameWeek2Date.substring(gameWeek2Date.length - 9);
