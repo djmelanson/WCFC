@@ -6,6 +6,8 @@ const gw1TimeWithSeconds = document.querySelector("#gw1-time-with-seconds");
 const gw1Time = document.querySelector("#gw1-time");
 const gw1Hour = document.querySelector("#gw1-hour");
 const gw1Minutes = document.querySelector("#gw1-minutes");
+const gw1TimeString = document.querySelector("#gw1-time-string");
+
 const wcfc = "Worcester County FC";
 const todayDate = new Date().getTime();
 const now = Math.floor(todayDate / (1000*60*60*24));
@@ -23,7 +25,18 @@ const gameWeek1Hour = gameWeek1TimeWithSeconds.substring(0, gameWeek1TimeWithSec
 const gameWeek1Minutes = gameWeek1TimeWithSeconds.substring(gameWeek1Time.length - 3);
 const gameWeek1DateTime = new Date(gameWeek1Date).getTime();
 const gameWeek1DateNumber = Math.floor(gameWeek1DateTime / (1000*60*60*24));
-
+const gameWeek1DayNumber = parseInt(gameWeek1Time);
+if (gameWeek1DayNumber > 12) {
+  gameWeek1HourInteger = (gameWeek1DayNumber - 12)
+} else {
+  gameWeek1HourInteger = gameWeek1DayNumber
+}
+const gameWeek1HourString = gameWeek1HourInteger.toString();
+if(gameWeek1DayNumber > 12) {
+  gameWeek1TimeString = gameWeek1HourString + gameWeek1Minutes + "pm";  
+} else {
+  gameWeek1TimeString = gameWeek1HourString + gameWeek1Minutes + "am";
+}
 
 const gameWeek2DateYear = gameWeek1Date.substring(0, gameWeek2Date.length - 9);
 const gameWeek2TimeWithSeconds = gameWeek2Date.substring(gameWeek2Date.length - 9);
@@ -107,3 +120,4 @@ gw1TimeWithSeconds.innerHTML = gameWeek1TimeWithSeconds;
 gw1Time.innerHTML = gameWeek1Time;
 gw1Hour.innerHTML = gameWeek1Hour;
 gw1Minutes.innerHTML = gameWeek1Minutes;
+gw1TimeString.innerHTML = gameWeek1TimeString;
