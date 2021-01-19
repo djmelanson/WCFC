@@ -23,7 +23,10 @@ const gw2Away = document.querySelector("#gw2-away");
 const gw2Field = document.querySelector("#gw2-field");
 
 const wcfc = "Worcester County FC";
-const upcomingGame = document.querySelector("#upcoming-game");
+const upcomingGameDate = document.querySelector("#upcoming-game-date");
+const upcomingGameOpponent = document.querySelector("#upcoming-game-opponent");
+const upcomingGameTime = document.querySelector("#upcoming-game-time");
+const upcomingGameLocation = document.querySelector("#upcoming-game-location");
 const todayDate = new Date().getTime();
 const now = Math.floor(todayDate / (1000*60*60*24));
 
@@ -103,14 +106,17 @@ const countdownToGameOne = gameWeek1DateTime - todayDate;
 const countdownToGameTwo = gameWeek2DateTime - todayDate;
 
 if (countdownToGameOne > 0) {
-    /*distance = countdownToGameOne;*/
-    upcomingGame.innerHTML = gameWeek1FullMonthDate;
+    upcomingGameDate.innerHTML = gameWeek1FullMonthDate;
+    upcomingGameOpponent.innerHTML = gameWeek1.Opponent;
+    upcomingGameTime.innerHTML = gameWeek1TimeString;
+    upcomingGameLocation.innerHTML = gameWeek1.field;
   } else if (countdownToGameTwo > 0) {
-    /*distance = countdownToGameTwo;*/
-    upcomingGame.innerHTML = gameWeek2FullMonthDate;
+    upcomingGameDate.innerHTML = gameWeek2FullMonthDate;
+    upcomingGameOpponent.innerHTML = gameWeek2.Opponent;
+    upcomingGameTime.innerHTML = gameWeek2TimeString;
+    upcomingGameLocation.innerHTML = gameWeek2.field;
   } else {
-    /*document.querySelector("#upcoming-game")*/
-    upcomingGame.innerHTML = "No upcoming games";
+    upcomingGameDate.innerHTML = "No upcoming games";
   }
 
 /* Update the count down every 1 second */
@@ -127,15 +133,15 @@ document.querySelector("#upcoming-game").innerHTML = days + "d " + hours + "h " 
   }, 1000)
 
 /* Set game info */
-const gameWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, field: "Harry Della Russo Stadium, Revere", homeScore: "-", awayScore: "-"};
-const gameWeek2 = {homeTeam: "FC Hawks", awayTeam: wcfc, field: "Edge Sports Center, Bedford", score: "- v -"};
-const gameWeek3 = {homeTeam: wcfc, awayTeam: "Inter Boston FC", field: "Klingle Field, Paxton", score: "- v -"};
-const gameWeek4 = {homeTeam: "Eastern Mass FC", awayTeam: wcfc, field: "Knoll Field, Melrose", score: "- v -"};
-const gameWeek5 = {homeTeam: wcfc, awayTeam: "Worcester Warriors", field: "Klingle Field, Paxton", score: "- v -"};
-const gameWeek6 = {homeTeam: "SR Young Boys", awayTeam: wcfc, field: "Amesbury Sports Park", score: "- v -"};
-const gameWeek7 = {homeTeam: wcfc, awayTeam: "Lynnfield Legends", field: "Klingle Field, Paxton", score: "- v -"};
-const playoffWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, field: "Veterans Field, Waltham", score: "- v -"};
-const playoffWeek2 = {homeTeam: "Inter Boston FC", awayTeam: wcfc, field: "Medfield High School", score: "- v -"};
+const gameWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, opponent: "@ North Shore FC", field: "Harry Della Russo Stadium, Revere", homeScore: "-", awayScore: "-"};
+const gameWeek2 = {homeTeam: "FC Hawks", awayTeam: wcfc, opponent: "@ FC Hawks", field: "Edge Sports Center, Bedford", score: "- v -"};
+const gameWeek3 = {homeTeam: wcfc, awayTeam: "Inter Boston FC", opponent: "v Inter Boston FC", field: "Klingle Field, Paxton", score: "- v -"};
+const gameWeek4 = {homeTeam: "Eastern Mass FC", awayTeam: wcfc, opponent: "@ Eastern Mass FC", field: "Knoll Field, Melrose", score: "- v -"};
+const gameWeek5 = {homeTeam: wcfc, awayTeam: "Worcester Warriors", opponent: "v Worcester Warriors", field: "Klingle Field, Paxton", score: "- v -"};
+const gameWeek6 = {homeTeam: "SR Young Boys", awayTeam: wcfc, opponent: "@ SR Young Boys", field: "Amesbury Sports Park", score: "- v -"};
+const gameWeek7 = {homeTeam: wcfc, awayTeam: "Lynnfield Legends", opponent: "v Lynnfield Legends", field: "Klingle Field, Paxton", score: "- v -"};
+const playoffWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, opponent: "@ North Shore FC", field: "Veterans Field, Waltham", score: "- v -"};
+const playoffWeek2 = {homeTeam: "Inter Boston FC", awayTeam: wcfc, opponent: "@ Inter Boston FC", field: "Medfield High School", score: "- v -"};
 
 
 /*  Update scores  */
