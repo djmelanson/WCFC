@@ -7,7 +7,6 @@ const gw1Time = document.querySelector("#gw1-time");
 const gw1Hour = document.querySelector("#gw1-hour");
 const gw1Minutes = document.querySelector("#gw1-minutes");
 const gw1TimeString = document.querySelector("#gw1-time-string");
-const gw1DateSchedule = document.querySelector("#gw1-date-schedule");
 
 const wcfc = "Worcester County FC";
 const todayDate = new Date().getTime();
@@ -26,22 +25,24 @@ const gameWeek1Hour = gameWeek1TimeWithSeconds.substring(0, gameWeek1TimeWithSec
 const gameWeek1Minutes = gameWeek1Time.substring(gameWeek1Time.length - 3);
 const gameWeek1DateTime = new Date(gameWeek1Date).getTime();
 const gameWeek1DateNumber = Math.floor(gameWeek1DateTime / (1000*60*60*24));
-const gameWeek1DayNumber = parseInt(gameWeek1Time);
-if (gameWeek1DayNumber > 12) {
-  gameWeek1HourInteger = (gameWeek1DayNumber - 12)
+const gameWeek1HourNumber = parseInt(gameWeek1Time);
+
+/* If the hour is higher than 12, subtract 12 from it */
+if (gameWeek1HourNumber > 12) {
+  gameWeek1HourInteger = (gameWeek1HourNumber - 12)
 } else {
-  gameWeek1HourInteger = gameWeek1DayNumber
+  gameWeek1HourInteger = gameWeek1HourNumber;
 }
 const gameWeek1HourString = gameWeek1HourInteger.toString();
 
-if(gameWeek1DayNumber > 23) {
+/* If game start time is 24 or 1-11, add am, otherwise add pm */
+if(gameWeek1HourNumber > 23) {
   gameWeek1TimeString = gameWeek1HourString + gameWeek1Minutes + "am";
-} else if (gameWeek1DayNumber > 11) {
+} else if (gameWeek1HourNumber > 11) {
   gameWeek1TimeString = gameWeek1HourString + gameWeek1Minutes + "pm";  
 } else {
   gameWeek1TimeString = gameWeek1HourString + gameWeek1Minutes + "am";
 }
-const gameWeek1DateSchedule = gameWeek1DateYear.substring(0, gameWeek1DateYear - 3) + gameWeek1DayNumber;
 
 const gameWeek2DateYear = gameWeek1Date.substring(0, gameWeek2Date.length - 9);
 const gameWeek2TimeWithSeconds = gameWeek2Date.substring(gameWeek2Date.length - 9);
@@ -126,4 +127,3 @@ gw1Time.innerHTML = gameWeek1Time;
 gw1Hour.innerHTML = gameWeek1Hour;
 gw1Minutes.innerHTML = gameWeek1Minutes;
 gw1TimeString.innerHTML = gameWeek1TimeString;
-gw1DateSchedule.innerHTML = gameWeek1DateSchedule;
