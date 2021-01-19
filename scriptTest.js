@@ -1,4 +1,4 @@
-/*  Set constant variables to HTML tags  */
+/*  Set constant variables and assign some to HTML tags  */
 const gw1FullDate = document.querySelector("#gw1-full-date");
 const gw1DateWithYear = document.querySelector("#gw1-date-with-year");
 const gw1DateTrimmed = document.querySelector("#gw1-date-trimmed");
@@ -7,16 +7,46 @@ const gw1Time = document.querySelector("#gw1-time");
 const gw1Hour = document.querySelector("#gw1-hour");
 const gw1Minutes = document.querySelector("#gw1-minutes");
 const wcfc = "Worcester County FC";
+const todayDate = new Date().getTime();
+const now = Math.floor(todayDate / (1000*60*60*24));
 
 
 /* Set game dates */
 const gameWeek1Date = "September 19, 2021 11:00:00";
+const gameWeek2Date = "September 26, 2021 09:30:00";
+
+/* Sets game date info based on game date above */
 const gameWeek1DateYear = gameWeek1Date.substring(0, gameWeek1Date.length - 9);
 const gameWeek1TimeWithSeconds = gameWeek1Date.substring(gameWeek1Date.length - 9);
 const gameWeek1Time = gameWeek1TimeWithSeconds.substring(0, gameWeek1TimeWithSeconds.length - 3);
 const gameWeek1Hour = gameWeek1TimeWithSeconds.substring(0, gameWeek1TimeWithSeconds.length - 5);
 const gameWeek1Minutes = gameWeek1TimeWithSeconds.substring(gameWeek1Time.length - 3);
+const gameWeek1DateTime = new Date(gameWeek1Date).getTime();
+const gameWeek1DateNumber = Math.floor(gameWeek1DateTime / (1000*60*60*24));
 
+
+const gameWeek2DateYear = gameWeek1Date.substring(0, gameWeek2Date.length - 9);
+const gameWeek2TimeWithSeconds = gameWeek2Date.substring(gameWeek2Date.length - 9);
+const gameWeek2Time = gameWeek2TimeWithSeconds.substring(0, gameWeek2TimeWithSeconds.length - 3);
+const gameWeek2Hour = gameWeek2TimeWithSeconds.substring(0, gameWeek2TimeWithSeconds.length - 5);
+const gameWeek2Minutes = gameWeek2TimeWithSeconds.substring(gameWeek2Time.length - 3);
+const gameWeek2DateTime = new Date(gameWeek2Date).getTime();
+const gameWeek2DateNumber = Math.floor(gameWeek2DateTime / (1000*60*60*24));
+
+
+ /* Set countdown to each game and find which one is next */
+const countdownToGameOne = gameWeek1DateTime - todayDate;
+var countdownToGameTwo = gameTwoDate - todayDate;
+
+if (countdownToGameOne > 0) {
+    distance = countdownToGameOne;
+  } else if (countdownToGameTwo > 0) {
+    distance = countdownToGameTwo;
+  } else if (countdownToGameThree > 0) {
+    distance = countdownToGameThree
+  } else {
+    document.querySelector("#upcoming-game").innerHTML = "No upcoming games";
+  }
 
 /* Set game info */
 const gameWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, field: "Harry Della Russo Stadium, Revere", homeScore: "-", awayScore: "-"};
