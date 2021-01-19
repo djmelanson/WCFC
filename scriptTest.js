@@ -1,15 +1,6 @@
 /*  Set constant variables and assign some to HTML tags  */
-const gw1FullDate = document.querySelector("#gw1-full-date");
-const gw1DateWithYear = document.querySelector("#gw1-date-with-year");
-const gw1DateTrimmed = document.querySelector("#gw1-date-trimmed");
-const gw1TimeWithSeconds = document.querySelector("#gw1-time-with-seconds");
-const gw1Time = document.querySelector("#gw1-time");
-const gw1Hour = document.querySelector("#gw1-hour");
-const gw1Minutes = document.querySelector("#gw1-minutes");
-const gw1TimeString = document.querySelector("#gw1-time-string");
-const gw1DayInteger = document.querySelector("#gw1-day-integer");
 const gw1ScheduleDay = document.querySelector("#gw1-schedule-day");
-const gw1FullMonthDate = document.querySelector("#gw1-full-month-date");
+const gw1TimeString = document.querySelector("#gw1-time-string");
 const gw1Home = document.querySelector("#gw1-home");
 const gw1Score = document.querySelector("#gw1-score");
 const gw1Away = document.querySelector("#gw1-away");
@@ -119,12 +110,12 @@ const playoffWeek2 = {homeTeam: "Inter Boston FC", awayTeam: wcfc, opponent: "@ 
  
  if (countdownToGameOne > 0) {
      upcomingGameDate.innerHTML = gameWeek1FullMonthDate;
-     upcomingGameOpponent.innerHTML = gameWeek1.Opponent;
+     upcomingGameOpponent.innerHTML = gameWeek1.opponent;
      upcomingGameTime.innerHTML = gameWeek1TimeString;
      upcomingGameLocation.innerHTML = gameWeek1.field;
    } else if (countdownToGameTwo > 0) {
      upcomingGameDate.innerHTML = gameWeek2FullMonthDate;
-     upcomingGameOpponent.innerHTML = gameWeek2.Opponent;
+     upcomingGameOpponent.innerHTML = gameWeek2.opponent;
      upcomingGameTime.innerHTML = gameWeek2TimeString;
      upcomingGameLocation.innerHTML = gameWeek2.field;
    } else {
@@ -162,14 +153,6 @@ playoffWeek2.awayScore = 2;
 
 
 /*  Set game info into HTML tags by ID  */
-gw1FullDate.innerHTML = gameWeek1Date;
-gw1DateWithYear.innerHTML = gameWeek1DateYear;
-gw1TimeWithSeconds.innerHTML = gameWeek1TimeWithSeconds;
-gw1Time.innerHTML = gameWeek1Time;
-gw1Hour.innerHTML = gameWeek1Hour;
-gw1Minutes.innerHTML = gameWeek1Minutes;
-gw1DayInteger.innerHTML = gameWeek1DayInteger;
-gw1FullMonthDate.innerHTML = gameWeek1FullMonthDate;
 gw1ScheduleDay.innerHTML = gameWeek1ScheduleDay;
 gw1TimeString.innerHTML = gameWeek1TimeString;
 gw1Home.innerHTML = gameWeek1.homeTeam;
