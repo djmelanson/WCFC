@@ -8,6 +8,7 @@ const gw1Hour = document.querySelector("#gw1-hour");
 const gw1Minutes = document.querySelector("#gw1-minutes");
 const gw1TimeString = document.querySelector("#gw1-time-string");
 const gw1DayInteger = document.querySelector("#gw1-day-integer");
+const gw1ScheduleDay = document.querySelector("#gw1-schedule-day");
 
 const wcfc = "Worcester County FC";
 const todayDate = new Date().getTime();
@@ -29,6 +30,8 @@ const gameWeek1DateNumber = Math.floor(gameWeek1DateTime / (1000*60*60*24));
 const gameWeek1HourNumber = parseInt(gameWeek1Time);
 const gameWeek1DayNumber = gameWeek1DateYear.slice(-8);
 const gameWeek1DayInteger = parseInt(gameWeek1DayNumber);
+const gameWeek1Month = gameWeek1DateYear.slice(0,3);
+const gameWeek1ScheduleDay = gameWeek1Month + " " + gameWeek1DayInteger;
 
 /* If the hour is higher than 12, subtract 12 from it */
 if (gameWeek1HourNumber > 12) {
@@ -131,3 +134,4 @@ gw1Hour.innerHTML = gameWeek1Hour;
 gw1Minutes.innerHTML = gameWeek1Minutes;
 gw1TimeString.innerHTML = gameWeek1TimeString;
 gw1DayInteger.innerHTML = gameWeek1DayInteger;
+gw1ScheduleDay.innerHTML = gameWeek1ScheduleDay;
