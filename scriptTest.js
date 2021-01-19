@@ -1,9 +1,19 @@
 /*  Set constant variables to HTML tags  */
 const gw1FullDate = document.querySelector("#gw1-full-date");
+const gw1DateWithYear = document.querySelector("#gw1-date-with-year");
+const gw1DateTrimmed = document.querySelector("#gw1-date-trimmed");
+const gw1TimeWithSeconds = document.querySelector("#gw1-time-with-seconds");
+const gw1Time = document.querySelector("#gw1-time");
+const gw1Hour = document.querySelector("#gw1-hour");
+const gw1Minutes = document.querySelector("#gw1-minutes");
 const wcfc = "Worcester County FC";
+
 
 /* Set game dates */
 const gameWeek1Date = "September 19, 2021 11:00:00";
+const gameWeek1DateYear = gameWeek1Date.substring(0, gameWeek1Date.length - 9);
+const gameWeek1DateTrimmed = gameWeek1Date.substring(gameWeek1Date.length - 9);
+
 
 
 /* Set game info */
@@ -49,3 +59,13 @@ playoffWeek2.awayScore = 2;
 
 /*  Set game info into HTML tags by ID  */
 gw1FullDate.innerHTML = gameWeek1Date;
+gw1DateWithYear.innerHTML = gameWeek1DateYear;
+gw1DateTrimmed.innerHTML = gameWeek1DateTrimmed;
+
+/* 
+gw1FullDate.innerHTML = 
+gw1TimeWithSeconds.innerHTML = 
+gw1Time.innerHTML = 
+gw1Hour.innerHTML = 
+gw1Minutes.innerHTML = 
+*/
