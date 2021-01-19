@@ -7,6 +7,7 @@ const gw1Time = document.querySelector("#gw1-time");
 const gw1Hour = document.querySelector("#gw1-hour");
 const gw1Minutes = document.querySelector("#gw1-minutes");
 const gw1TimeString = document.querySelector("#gw1-time-string");
+const gw1DateSchedule = document.querySelector("#gw1-date-schedule");
 
 const wcfc = "Worcester County FC";
 const todayDate = new Date().getTime();
@@ -40,6 +41,7 @@ if(gameWeek1DayNumber > 23) {
 } else {
   gameWeek1TimeString = gameWeek1HourString + gameWeek1Minutes + "am";
 }
+gameWeek1DateSchedule = gameWeek1DateYear.substring(gameWeek1DateYear - 3) + gameWeek1DayNumber;
 
 const gameWeek2DateYear = gameWeek1Date.substring(0, gameWeek2Date.length - 9);
 const gameWeek2TimeWithSeconds = gameWeek2Date.substring(gameWeek2Date.length - 9);
@@ -124,3 +126,4 @@ gw1Time.innerHTML = gameWeek1Time;
 gw1Hour.innerHTML = gameWeek1Hour;
 gw1Minutes.innerHTML = gameWeek1Minutes;
 gw1TimeString.innerHTML = gameWeek1TimeString;
+gw1DateSchedule.innerHTML = gameWeek1DateSchedule;
