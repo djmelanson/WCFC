@@ -14,7 +14,7 @@ const now = Math.floor(todayDate / (1000*60*60*24));
 
 
 /* Set game dates */
-const gameWeek1Date = "January 17, 2021 12:30:00";
+const gameWeek1Date = "January 17, 2021 23:30:00";
 const gameWeek2Date = "January 20, 2021 09:30:00";
 
 /* Sets game date info based on game date above */
@@ -32,7 +32,10 @@ if (gameWeek1DayNumber > 12) {
   gameWeek1HourInteger = gameWeek1DayNumber
 }
 const gameWeek1HourString = gameWeek1HourInteger.toString();
-if(gameWeek1DayNumber > 12) {
+
+if(gameWeek1DayNumber > 23) {
+  gameWeek1TimeString = gameWeek1HourString + gameWeek1Minutes + "am";
+} else if (gameWeek1DayNumber > 11) {
   gameWeek1TimeString = gameWeek1HourString + gameWeek1Minutes + "pm";  
 } else {
   gameWeek1TimeString = gameWeek1HourString + gameWeek1Minutes + "am";
