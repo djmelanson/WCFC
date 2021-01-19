@@ -23,6 +23,7 @@ const gw2Away = document.querySelector("#gw2-away");
 const gw2Field = document.querySelector("#gw2-field");
 
 const wcfc = "Worcester County FC";
+const upcomingGame = document.querySelector("#upcoming-game");
 const todayDate = new Date().getTime();
 const now = Math.floor(todayDate / (1000*60*60*24));
 
@@ -102,11 +103,14 @@ const countdownToGameOne = gameWeek1DateTime - todayDate;
 const countdownToGameTwo = gameWeek2DateTime - todayDate;
 
 if (countdownToGameOne > 0) {
-    distance = countdownToGameOne;
+    /*distance = countdownToGameOne;*/
+    upcomingGame.innerHTML = gameWeek1FullMonthDate;
   } else if (countdownToGameTwo > 0) {
-    distance = countdownToGameTwo;
+    /*distance = countdownToGameTwo;*/
+    upcomingGame.innerHTML = gameWeek2FullMonthDate;
   } else {
-    document.querySelector("#upcoming-game").innerHTML = "No upcoming games";
+    /*document.querySelector("#upcoming-game")*/
+    upcomingGame.innerHTML = "No upcoming games";
   }
 
 /* Update the count down every 1 second */
