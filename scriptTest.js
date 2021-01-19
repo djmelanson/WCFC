@@ -11,7 +11,12 @@ const wcfc = "Worcester County FC";
 
 /* Set game dates */
 const gameWeek1Date = "September 19, 2021 11:00:00";
-const gameWeek1DateYear = gameWeek1Date.substring(0, gameWeek1Date.length - 9);
+const gameWeek1DateYear = "Hello"
+
+/* 
+gameWeek1Date.substring(0, gameWeek1Date.length - 9);
+*/
+
 const gameWeek1DateTrimmed = gameWeek1Date.substring(gameWeek1Date.length - 9);
 
 
