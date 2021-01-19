@@ -101,24 +101,6 @@ if(gameWeek2HourNumber > 23) {
   gameWeek2TimeString = gameWeek2HourString + gameWeek2Minutes + "am";
 }
 
- /* Set countdown to each game and find which one is next */
-const countdownToGameOne = gameWeek1DateTime - todayDate;
-const countdownToGameTwo = gameWeek2DateTime - todayDate;
-
-if (countdownToGameOne > 0) {
-    upcomingGameDate.innerHTML = gameWeek1FullMonthDate;
-    upcomingGameOpponent.innerHTML = gameWeek1.Opponent;
-    upcomingGameTime.innerHTML = gameWeek1TimeString;
-    upcomingGameLocation.innerHTML = gameWeek1.field;
-  } else if (countdownToGameTwo > 0) {
-    upcomingGameDate.innerHTML = gameWeek2FullMonthDate;
-    upcomingGameOpponent.innerHTML = gameWeek2.Opponent;
-    upcomingGameTime.innerHTML = gameWeek2TimeString;
-    upcomingGameLocation.innerHTML = gameWeek2.field;
-  } else {
-    upcomingGameDate.innerHTML = "No upcoming games";
-  }
-
 /* Set game info */
 const gameWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, opponent: "@ North Shore FC", field: "Harry Della Russo Stadium, Revere", homeScore: "-", awayScore: "-"};
 const gameWeek2 = {homeTeam: "FC Hawks", awayTeam: wcfc, opponent: "@ FC Hawks", field: "Edge Sports Center, Bedford", score: "- v -"};
@@ -131,6 +113,25 @@ const playoffWeek1 = {homeTeam: "North Shore FC", awayTeam: wcfc, opponent: "@ N
 const playoffWeek2 = {homeTeam: "Inter Boston FC", awayTeam: wcfc, opponent: "@ Inter Boston FC", field: "Medfield High School", score: "- v -"};
 
 
+ /* Set countdown to each game and find which one is next */
+ const countdownToGameOne = gameWeek1DateTime - todayDate;
+ const countdownToGameTwo = gameWeek2DateTime - todayDate;
+ 
+ if (countdownToGameOne > 0) {
+     upcomingGameDate.innerHTML = gameWeek1FullMonthDate;
+     upcomingGameOpponent.innerHTML = gameWeek1.Opponent;
+     upcomingGameTime.innerHTML = gameWeek1TimeString;
+     upcomingGameLocation.innerHTML = gameWeek1.field;
+   } else if (countdownToGameTwo > 0) {
+     upcomingGameDate.innerHTML = gameWeek2FullMonthDate;
+     upcomingGameOpponent.innerHTML = gameWeek2.Opponent;
+     upcomingGameTime.innerHTML = gameWeek2TimeString;
+     upcomingGameLocation.innerHTML = gameWeek2.field;
+   } else {
+     upcomingGameDate.innerHTML = "No upcoming games";
+   }
+
+  
 /*  Update scores  */
 gameWeek1.homeScore = 1;
 gameWeek1.awayScore = 0;
