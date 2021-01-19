@@ -14,7 +14,7 @@ const now = Math.floor(todayDate / (1000*60*60*24));
 
 
 /* Set game dates */
-const gameWeek1Date = "January 17, 2021 11:00:00";
+const gameWeek1Date = "January 17, 2021 12:30:00";
 const gameWeek2Date = "January 20, 2021 09:30:00";
 
 /* Sets game date info based on game date above */
