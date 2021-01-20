@@ -45,11 +45,17 @@
 
 <br>
 
+<p id="upcoming-game-date"></p>
+<p id="upcoming-game-opponent"></p>
+<p id="upcoming-game-time"></p>
+<p id="upcoming-game-location"></p>
+
+
 <!--schedule table-->
 <table class="table table-sm table-striped table-hover">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Date</th>
+      <th scope="col" class=>Date</th>
       <th scope="col">Time</th>
       <th scope="col" class="text-right">Home</th>
       <th scope="col"></th>
@@ -59,76 +65,97 @@
   </thead>
   <tbody>
     <tr>
-      <td id="gw1-date"></td>
-      <td id="gw1-time"></td>
+      <td id="gw1-schedule-day"></td>
+      <td id="gw1-time-string"></td>
       <td id="gw1-home" class="text-right"></td class="text-right">
       <td id="gw1-score" class="text-center"></td>
       <td id="gw1-away" class="text-left"></td>
       <td id="gw1-field"></td>
     </tr>
     <tr>
-      <td id="gw2-date"></td>
-      <td id="gw2-time"></td>
+      <td id="gw2-schedule-day"></td>
+      <td id="gw2-time-string"></td>
       <td id="gw2-home" class="text-right"></td class="text-right">
       <td id="gw2-score" class="text-center"></td>
       <td id="gw2-away" class="text-left"></td>
       <td id="gw2-field"></td>
     </tr>
     <tr>
-      <td id="gw3-date"></td>
-      <td id="gw3-time"></td>
+      <td id="gw3-schedule-day"></td>
+      <td id="gw3-time-string"></td>
       <td id="gw3-home" class="text-right"></td class="text-right">
       <td id="gw3-score" class="text-center"></td>
       <td id="gw3-away" class="text-left"></td>
       <td id="gw3-field"></td>
     </tr>
     <tr>
-      <td id="gw4-date"></td>
-      <td id="gw4-time"></td>
+      <td id="gw4-schedule-day"></td>
+      <td id="gw4-time-string"></td>
       <td id="gw4-home" class="text-right"></td class="text-right">
       <td id="gw4-score" class="text-center"></td>
       <td id="gw4-away" class="text-left"></td>
       <td id="gw4-field"></td>
     </tr>
     <tr>
-      <td id="gw5-date"></td>
-      <td id="gw5-time"></td>
+      <td id="gw5-schedule-day"></td>
+      <td id="gw5-time-string"></td>
       <td id="gw5-home" class="text-right"></td class="text-right">
       <td id="gw5-score" class="text-center"></td>
       <td id="gw5-away" class="text-left"></td>
       <td id="gw5-field"></td>
     </tr>
     <tr>
-      <td id="gw6-date"></td>
-      <td id="gw6-time"></td>
+      <td id="gw6-schedule-day"></td>
+      <td id="gw6-time-string"></td>
       <td id="gw6-home" class="text-right"></td class="text-right">
       <td id="gw6-score" class="text-center"></td>
       <td id="gw6-away" class="text-left"></td>
       <td id="gw6-field"></td>
     </tr>
     <tr>
-      <td id="gw7-date"></td>
-      <td id="gw7-time"></td>
+      <td id="gw7-schedule-day"></td>
+      <td id="gw7-time-string"></td>
       <td id="gw7-home" class="text-right"></td class="text-right">
       <td id="gw7-score" class="text-center"></td>
       <td id="gw7-away" class="text-left"></td>
       <td id="gw7-field"></td>
     </tr>
+  </tbody>
+</table>
+
+<br>
+
+<h4 class="text-center">Playoffs</h4>
+
+<br>
+
+<table class="table table-sm table-striped table-hover">
+  <thead class="thead-dark">
     <tr>
-      <td id="po1-date"></td>
-      <td id="po1-time"></td>
-      <td id="po1-home" class="text-right"></td class="text-right">
-      <td id="po1-score" class="text-center"></td>
-      <td id="po1-away" class="text-left"></td>
-      <td id="po1-field"></td>
+      <th scope="col" class=>Date</th>
+      <th scope="col">Time</th>
+      <th scope="col" class="text-right">Home</th>
+      <th scope="col"></th>
+      <th scope="col" class="text-left">Away</th>
+      <th scope="col">Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="gw8-schedule-day"></td>
+      <td id="gw8-time-string"></td>
+      <td id="gw8-home" class="text-right"></td class="text-right">
+      <td id="gw8-score" class="text-center"></td>
+      <td id="gw8-away" class="text-left"></td>
+      <td id="gw8-field"></td>
     </tr>
     <tr>
-      <td id="po2-date"></td>
-      <td id="po2-time"></td>
-      <td id="po2-home" class="text-right"></td class="text-right">
-      <td id="po2-score" class="text-center"></td>
-      <td id="po2-away" class="text-left"></td>
-      <td id="po2-field"></td>
+      <td id="gw9-schedule-day"></td>
+      <td id="gw9-time-string"></td>
+      <td id="gw9-home" class="text-right"></td class="text-right">
+      <td id="gw9-score" class="text-center"></td>
+      <td id="gw9-away" class="text-left"></td>
+      <td id="gw9-field"></td>
     </tr>
   </tbody>
 </table>
@@ -148,6 +175,7 @@
     <a href="https://instagram.com/worcestercountyfc" target="_blank" class="m-1 fa fa-instagram align-middle"></a>
   </div>
 </div>
+
 
 <script src="script.js"></script>
 
